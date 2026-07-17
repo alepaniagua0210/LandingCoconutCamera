@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-    
+
 {% block title %}Photo Booth - Plaza Natura{% endblock %}
 
 {% block content %}
@@ -12,19 +12,18 @@
         <span class="hero-badge">📍 Plaza Natura</span>
         <h1 class="hero-title">Captura el Momento Perfecto</h1>
         <p class="hero-text">
-            Vive la experiencia única. Nuestro Photo Booth crea recuerdos 
+            Vive la experiencia única. Nuestro Photo Booth crea recuerdos
             inseparables para siempre. ¡Resérvalo para tu evento!
         </p>
         <div class="hero-btns">
             <a href="#paquetes" class="btn btn-primary btn-lg">Ver Paquetes</a>
         </div>
-        
+
     </div>
     <div class="hero-visual">
         <div class="booth-mockup">
-             <img src="{{ url_for('static', filename='imagenes/Photobooth.jpeg') }}" 
-                     alt="Photobooth" 
-                     class="booth-mockup">
+            <img src="{{ url_for('static', filename='imagenes/Photobooth.jpeg') }}" alt="Photobooth"
+                class="booth-mockup-img">
         </div>
     </div>
 </section>
@@ -57,7 +56,7 @@
 <section id="paquetes" class="pb-packages">
     <h2 class="section-title">Paquetes de Alquiler</h2>
     <p class="section-subtitle">Elige el plan perfecto para tu evento</p>
-    
+
     <div class="packages-grid">
         <!-- PAQUETE BÁSICO -->
         <div class="package-card">
@@ -194,7 +193,8 @@
                 <i class="fa-solid fa-wallet"></i>
                 <div>
                     <strong>Forma de reserva</strong>
-                    <p>Reserva tu Photobooth con el <strong>30%</strong> y el restante puedes liquidarlo poco a poco hasta el día del evento.</p>
+                    <p>Reserva tu Photobooth con el <strong>30%</strong> y el restante puedes liquidarlo poco a poco
+                        hasta el día del evento.</p>
                 </div>
             </div>
         </div>
@@ -208,7 +208,8 @@
     <div class="testimonials-grid">
         <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p class="quote">"Fue lo mejor de nuestra fiesta. Todos los invitados amaron el Photo Booth. ¡Las fotos quedaron únicas!"</p>
+            <p class="quote">"Fue lo mejor de nuestra fiesta. Todos los invitados amaron el Photo Booth. ¡Las fotos
+                quedaron únicas!"</p>
             <div class="author">
                 <div class="avatar">MR</div>
                 <div class="info">
@@ -219,7 +220,8 @@
         </div>
         <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p class="quote">"Excelente servicio para nuestro evento corporativo. El equipo llegó puntual y el resultado fue impecable."</p>
+            <p class="quote">"Excelente servicio para nuestro evento corporativo. El equipo llegó puntual y el resultado
+                fue impecable."</p>
             <div class="author">
                 <div class="avatar">JC</div>
                 <div class="info">
@@ -230,7 +232,8 @@
         </div>
         <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p class="quote">"Mi hija amó cada minuto. La calidad de impresión es increíble y el personal muy amable."</p>
+            <p class="quote">"Mi hija amó cada minuto. La calidad de impresión es increíble y el personal muy amable."
+            </p>
             <div class="author">
                 <div class="avatar">AL</div>
                 <div class="info">

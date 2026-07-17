@@ -614,6 +614,16 @@
 
 /* Responsive */
 @media (max-width: 968px) {
+
+    .hero-carousel {
+        margin-bottom: 80px; /* reserva espacio real para los botones */
+    }
+
+    .carousel-nav {
+        position: absolute;
+        bottom: -50px;
+        z-index: 50; /* asegura que quede encima de cualquier otra sección */
+    }
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
