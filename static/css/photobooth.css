@@ -646,10 +646,8 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .hero-visual {
-        width: 100%;
-        margin-top: 30px;
-        justify-content: center;
+    .pb-hero {
+        flex-direction: column;
     }
 
     .hero-content {
@@ -665,6 +663,12 @@
         justify-content: center;
     }
 
+    .hero-visual {
+        width: 100%;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
     .package-card.popular {
         transform: scale(1);
     }
@@ -673,14 +677,6 @@
         transform: translateY(-10px);
     }
 }
-
-@media (max-width: 480px) {
-    .booth-mockup {
-        width: 260px;
-        height: 340px;
-    }
-}
-
 @media (max-width: 768px) {
 
     .pb-hero,
