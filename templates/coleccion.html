@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}Colecciones | Coconut Camera{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/coleccion.css') }}">
+
+<section class="collection-hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            Coconut Camera
+        </span>
+
+        <h1>
+
+            Elige tu próxima
+
+            <span>
+                experiencia fotográfica
+            </span>
+
+        </h1>
+
+        <p>
+
+            Descubre nuestra colección de cámaras digitales
+            y vive momentos inolvidables con nuestro servicio
+            profesional de Photo Booth.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="stats-section">
+
+    <div class="stat-card">
+
+        <h2>20+</h2>
+
+        <p>Cámaras disponibles</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>20+</h2>
+
+        <p>Eventos realizados</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>100%</h2>
+
+        <p>Clientes satisfechos</p>
+
+    </div>
+
+</section>
+
+
+
+<section class="options-section">
+
+    <a href="{{ url_for('camara') }}" class="option-card">
+
+        <div class="option-img">
+
+            <img
+            src="{{ url_for('static',
+            filename='CamarasPNG/CamarasPNG/SonyRX100.png') }}">
+
+        </div>
+
+        <div class="option-info">
+
+            <span class="tag">
+
+                Colección
+
+            </span>
+
+            <h2>Cámaras</h2>
+
+            <p>
+
+                Cámaras compactas, retro y profesionales
+                cuidadosamente seleccionadas para capturar
+                cada momento con estilo.
+
+            </p>
+
+            <div class="btn-card">
+
+                Explorar Cámaras →
+
+            </div>
+
+        </div>
+
+    </a>
+
+
+
+
+    <a href="{{ url_for('photoboot') }}" class="option-card">
+
+        <div class="option-img">
+
+            <img
+
+            src="{{ url_for('static',
+            filename='imagenes/BannerPhotoBooth.png') }}">
+
+        </div>
+
+        <div class="option-info">
+
+            <span class="tag">
+
+                Servicio
+
+            </span>
+
+            <h2>Photo Booth</h2>
+
+            <p>
+
+                Haz que tus eventos sean inolvidables con
+                fotografías ilimitadas, accesorios y
+                recuerdos únicos.
+
+            </p>
+
+            <div class="btn-card">
+
+                Ver Photo Booth →
+
+            </div>
+
+        </div>
+
+    </a>
+
+</section>
+
+
+
+
+<section class="why-us">
+
+    <h2>
+
+        ¿Por qué elegir Coconut Camera?
+
+    </h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <div class="icon">
+
+                📸
+
+            </div>
+
+            <h3>
+
+                Equipos Únicos
+
+            </h3>
+
+            <p>
+
+                Seleccionamos cámaras con estilo,
+                personalidad y excelente calidad.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+
+                ✨
+
+            </div>
+
+            <h3>
+
+                Experiencias
+
+            </h3>
+
+            <p>
+
+                Más que vender equipos,
+                creamos recuerdos especiales.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+
+                ❤
+
+            </div>
+
+            <h3>
+
+                Atención Cercana
+
+            </h3>
+
+            <p>
+
+                Te ayudamos a elegir
+                la opción ideal para ti.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="cta-section">
+
+    <h2>
+
+        Captura momentos que duren para siempre
+
+    </h2>
+
+    <p>
+
+        Explora nuestras colecciones y encuentra
+        la opción perfecta para tus recuerdos.
+
+    </p>
+
+    <a href="{{ url_for('contacto') }}">
+
+        Contáctanos
+
+    </a>
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,337 @@
+/* ===== CARRITO COCONUT CAMERA ===== */
+
+:root {
+    --primary: #9a735c;
+    --primary-dark: #805e4e;
+    --primary-light: #b69a81;
+    --dark: #2d211d;
+    --light: #f8f6f4;
+    --lighter: #f2eee8;
+    --white: #fff;
+    --success: #4caf50;
+    --warning: #ff9800;
+    --danger: #f44336;
+    --whatsapp: #25d366;
+    --whatsapp-dark: #128c7e;
+}
+
+/* ===== BADGE CONTADOR NAVBAR ===== */
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* ===== BOTÓN AGREGAR AL CARRITO (en product-card) ===== */
+.btn-agregar,
+.btn-agregar-servicio {
+    display: block;
+    width: calc(100% - 70px);
+    margin-top: 18px;
+    padding: 11px 18px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.btn-agregar:hover,
+.btn-agregar-servicio:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(154,115,92,0.4);
+}
+
+/* ===== SECCIÓN CARRITO (página carrito.html) ===== */
+.carrito-page {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    background: var(--lighter);
+}
+
+.carrito-page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.carrito-page-subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.carrito-layout {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+    align-items: start;
+}
+
+.carrito-seccion {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.carrito-seccion-titulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--lighter);
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #f5f0ea;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.carrito-item-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.carrito-item-nombre {
+    font-weight: 500;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.carrito-item-precio {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+.carrito-item-eliminar {
+    background: none;
+    border: none;
+    color: #bbb;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 0.2s;
+    margin-left: 15px;
+}
+
+.carrito-item-eliminar:hover {
+    background: #ffe5e5;
+    color: var(--danger);
+}
+
+/* ===== PANEL RESUMEN ===== */
+.carrito-resumen {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 100px;
+}
+
+.carrito-resumen h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.resumen-total span:last-child {
+    color: var(--primary);
+}
+
+/* ===== BOTÓN WHATSAPP ===== */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    background: var(--whatsapp);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-whatsapp:hover {
+    background: var(--whatsapp-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+}
+
+.btn-whatsapp i {
+    font-size: 1.3rem;
+}
+
+.btn-vaciar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: none;
+    color: #aaa;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-vaciar:hover {
+    background: #fff0f0;
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.btn-seguir {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.btn-seguir:hover { text-decoration: underline; }
+
+/* ===== CARRITO VACÍO ===== */
+.carrito-vacio {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.carrito-vacio-layout {
+    display: flex;
+    justify-content: center
+}
+
+.carrito-vacio-icon { font-size: 4rem; margin-bottom: 20px; }
+
+.carrito-vacio h2 {
+    color: var(--dark);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.carrito-vacio p { color: #999; margin-bottom: 30px; }
+
+.carrito-vacio-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-ir {
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-ir:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ===== ALERTA FLOTANTE ===== */
+.coconut-alerta {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: slideUp 0.3s ease;
+    white-space: nowrap;
+}
+
+.coconut-alerta-success { background: var(--dark); color: white; }
+
+.coconut-alerta-warning {
+    background: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffcc02;
+}
+
+.coconut-alerta.fadeout {
+    animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 1; transform: translateX(-50%) translateY(0); }
+    to   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .carrito-layout { grid-template-columns: 1fr; }
+    .carrito-resumen { position: static; }
+    .carrito-page-title { font-size: 1.8rem; }
+}

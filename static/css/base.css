@@ -1,0 +1,279 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #564038;  /* pampas-900 */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #f8f6f4;  /* pampas-50 */
+}
+
+/* ===== FOOTER CON PALETA PAMPAS ===== */
+/* ===== FOOTER PROFESIONAL CON PALETA PAMPAS ===== */
+.footer {
+    background: #2d211d !important;  /* pampas-950 */
+    color: #e0d6c8 !important;  /* pampas-200 */
+    padding: 3rem 2rem 1.5rem !important;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+}
+
+/* Grid del footer */
+.footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 2.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Columnas */
+.footer-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+/* Logo */
+.footer-logo-title {
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    color: #f8f6f4 !important;  /* pampas-50 */
+    letter-spacing: 2px !important;
+    line-height: 1 !important;
+}
+
+.footer-logo-subtitle {
+    font-size: 0.7rem !important;
+    color: #9a735c !important;  /* pampas-600 */
+    letter-spacing: 3px !important;
+    text-transform: lowercase !important;
+    display: block !important;
+    margin-top: 4px !important;
+}
+
+/* Descripción */
+.footer-description {
+    color: #ccbaa5 !important;  /* pampas-300 */
+    line-height: 1.6 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+}
+
+/* Títulos de columnas */
+.footer-title {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #f8f6f4 !important;  /* pampas-50 */
+    margin-bottom: 0.5rem !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.footer-title::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -8px !important;
+    left: 0 !important;
+    width: 40px !important;
+    height: 2px !important;
+    background: #9a735c !important;  /* pampas-600 */
+    border-radius: 2px !important;
+}
+
+/* Listas de enlaces */
+.footer-links-list,
+.footer-contact {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+}
+
+.footer-links-list li a,
+.footer-contact li {
+    color: #ccbaa5 !important;  /* pampas-300 */
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 0.9rem !important;
+}
+
+.footer-links-list li a:hover {
+    color: #9a735c !important;  /* pampas-600 */
+    transform: translateX(5px) !important;
+}
+
+.footer-contact li i {
+    width: 20px !important;
+    color: #9a735c !important;  /* pampas-600 */
+    font-size: 1rem !important;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex !important;
+    gap: 1rem !important;
+    margin-top: 0.5rem !important;
+    flex-wrap: wrap !important;
+}
+
+.social-link {
+    width: 38px !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 50% !important;
+    color: #e0d6c8 !important;
+    transition: all 0.3s ease !important;
+    font-size: 1.1rem !important;
+    text-decoration: none !important;
+}
+
+.social-link:hover {
+    background: #9a735c !important;  /* pampas-600 */
+    color: white !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Borde separador */
+.footer-border {
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, #694e43, #9a735c, #694e43, transparent) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* Fila inferior */
+.footer-bottom {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    font-size: 0.8rem !important;
+    text-align: center !important;
+}
+
+.footer-bottom p {
+    color: #a78468 !important;  /* pampas-500 */
+    margin: 0 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 1.5rem 1rem !important;
+    }
+    
+    .footer-grid {
+        gap: 2rem !important;
+    }
+    
+    .footer-bottom {
+        flex-direction: column !important;
+    }
+    
+    .footer-title::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .footer-col {
+        text-align: center !important;
+        align-items: center !important;
+    }
+    
+    .footer-contact li {
+        justify-content: center !important;
+    }
+    
+    .footer-social {
+        justify-content: center !important;
+    }
+}
+
+/* ===== TIPOGRAFÍA ADICIONAL ===== */
+h1, h2, h3, h4, h5, h6 {
+    color: #2d211d;  /* pampas-950 */
+    font-weight: 600;
+}
+
+a {
+    color: #9a735c;  /* pampas-600 */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #805e4e;  /* pampas-700 */
+}
+
+/* ===== BOTONES GENERALES ===== */
+button, .btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* ===== UTILIDADES ===== */
+.text-primary {
+    color: #9a735c;  /* pampas-600 */
+}
+
+.text-dark {
+    color: #2d211d;  /* pampas-950 */
+}
+
+.text-light {
+    color: #b69a81;  /* pampas-400 */
+}
+
+.bg-primary {
+    background: #9a735c;  /* pampas-600 */
+}
+
+.bg-light {
+    background: #f8f6f4;  /* pampas-50 */
+}
+
+.bg-lighter {
+    background: #f2eee8;  /* pampas-100 */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 1.5rem;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}

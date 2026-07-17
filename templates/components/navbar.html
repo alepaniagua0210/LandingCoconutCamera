@@ -1,0 +1,385 @@
+{# components/navbar.html #}
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo imagen izquierda - FORZADO A LA IZQUIERDA -->
+        <div class="logo">
+            <div class="logo-link">
+                <img src="{{ url_for('static', filename='imagenes/Logo2.png') }}" alt="Coconut Camera" class="logo-img">
+            </div>
+        </div>
+
+        <!-- Links planos (sin marco) - CENTRADOS -->
+        <div class="nav-links-container nav-search-frame">
+            <ul class="nav-links">
+                <li>
+                    <a href="{{ url_for('index') }}"
+                        class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('nosotros') }}"
+                        class="nav-link {% if request.endpoint == 'nosotros' %}active{% endif %}">
+                        Nosotros
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Productos ▼</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ url_for('camara') }}"
+                                class="{% if request.endpoint == 'camara' %}active{% endif %}">
+                                Cámaras
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('photoboot') }}"
+                                class="{% if request.endpoint == 'photoboot' %}active{% endif %}">
+                                Photoboot
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{ url_for('contacto') }}"
+                        class="nav-link {% if request.endpoint == 'contacto' %}active{% endif %}">
+                        Contacto
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('carrito') }}"
+                        class="nav-link nav-carrito {% if request.endpoint == 'carrito' %}active{% endif %}">
+                        🛒 Carrito
+                        <span class="cart-count" style="display:none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Menú hamburguesa (mobile) -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* ===== NAVBAR CON PALETA PAMPAS - PLANO ===== */
+    .navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #f8f6f4 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+        z-index: 1000 !important;
+        padding: 0.8rem 2rem !important;
+    }
+
+    .nav-container {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        /* IMPORTANTE: quitamos space-between y usamos flex-start */
+        justify-content: flex-start !important;
+        gap: 2rem !important;
+    }
+
+    /* Logo - TOTALMENTE A LA IZQUIERDA */
+    .navbar .logo {
+        flex-shrink: 0 !important;
+        margin-right: 0 !important;
+        /* Forzar a la izquierda */
+        position: relative !important;
+        left: 0 !important;
+    }
+
+    .navbar .logo-link {
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+        cursor: pointer !important;
+    }
+
+    .navbar .logo-link:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .navbar .logo-img {
+        height: 70px !important;
+        width: auto !important;
+        display: block !important;
+    }
+
+    /* Contenedor de links - centrado */
+    .navbar .nav-links-container {
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    /* Links - sin marco, totalmente planos */
+    .navbar .nav-links {
+        display: flex !important;
+        list-style: none !important;
+        gap: 2rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .navbar .nav-link {
+        text-decoration: none !important;
+        color: #2d211d !important;
+        font-weight: 500 !important;
+        font-size: 1rem !important;
+        padding: 0.5rem 0 !important;
+        transition: all 0.3s !important;
+        position: relative !important;
+        display: inline-block !important;
+        background: transparent !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: #9a735c !important;
+        background: transparent !important;
+    }
+
+    .navbar .nav-link.active {
+        color: #9a735c !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+    }
+
+    .navbar .nav-link.active::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: -4px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 2px !important;
+        background: #9a735c !important;
+        border-radius: 2px !important;
+    }
+
+    /* Dropdown */
+    .navbar .dropdown {
+        position: relative !important;
+    }
+
+    .navbar .dropdown-toggle {
+        cursor: pointer !important;
+    }
+
+    .navbar .dropdown-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        background: #ffffff !important;
+        list-style: none !important;
+        min-width: 180px !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        margin-top: 0.5rem !important;
+        z-index: 1000 !important;
+    }
+
+    .navbar .dropdown-menu.show {
+        display: block !important;
+        animation: fadeInDown 0.3s ease !important;
+    }
+
+    .navbar .dropdown-menu li a {
+        color: #2d211d !important;
+        padding: 0.8rem 1.2rem !important;
+        display: block !important;
+        transition: all 0.3s !important;
+        text-decoration: none !important;
+        background: transparent !important;
+    }
+
+    .navbar .dropdown-menu li a:hover {
+        background: #9a735c !important;
+        color: white !important;
+        padding-left: 1.5rem !important;
+    }
+
+    /* Hamburguesa DESKTOP - se oculta */
+    .navbar .menu-toggle {
+        display: none !important;
+        flex-direction: column !important;
+        cursor: pointer !important;
+        gap: 4px !important;
+    }
+
+    .navbar .menu-toggle span {
+        width: 25px !important;
+        height: 3px !important;
+        background: #2d211d !important;
+        transition: 0.3s !important;
+    }
+
+    /* ===== MEDIA QUERY MOBILE ===== */
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 0.8rem 1.5rem !important;
+        }
+
+        .nav-container {
+            justify-content: space-between !important;
+            /* En móvil sí usamos space-between */
+            gap: 0 !important;
+        }
+
+        /* HAMBURGUESA MOBILE - visible */
+        .navbar .menu-toggle {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            z-index: 3000 !important;
+            order: 3 !important;
+        }
+
+        .navbar .menu-toggle span {
+            width: 28px !important;
+            height: 3px !important;
+            border-radius: 20px !important;
+            background: #2d211d !important;
+            transition: .4s ease !important;
+        }
+
+        /* ANIMACIÓN X */
+        .navbar .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px) !important;
+        }
+
+        .navbar .menu-toggle.active span:nth-child(2) {
+            opacity: 0 !important;
+        }
+
+        .navbar .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px) !important;
+        }
+
+        /* MENU MOBILE */
+        .navbar .nav-links-container {
+            position: fixed !important;
+            top: 0 !important;
+            right: -100% !important;
+            width: 80% !important;
+            max-width: 350px !important;
+            height: 100vh !important;
+            background: #f8f6f4 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            transition: right .5s ease !important;
+            z-index: 1500 !important;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .navbar .nav-links-container.active {
+            right: 0 !important;
+        }
+
+        /* LINKS MOBILE */
+        .navbar .nav-links {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 2rem !important;
+        }
+
+        .navbar .nav-link {
+            font-size: 1.5rem !important;
+            font-weight: 500 !important;
+            padding: 0.5rem 0 !important;
+            color: #2d211d !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #9a735c !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #9a735c !important;
+            font-weight: 600 !important;
+        }
+
+        .navbar .nav-link.active::after {
+            bottom: -2px !important;
+            height: 2px !important;
+        }
+
+        /* LOGO MOBILE */
+        .navbar .logo-img {
+            height: 40px !important;
+        }
+
+        /* DROPDOWN MOBILE */
+        .navbar .dropdown-menu {
+            position: static !important;
+            display: none !important;
+            margin-top: 10px !important;
+            background: rgba(154, 115, 92, 0.1) !important;
+            border-radius: 12px !important;
+            box-shadow: none !important;
+            text-align: center !important;
+        }
+
+        .navbar .dropdown-menu.show {
+            display: block !important;
+        }
+
+        .navbar .dropdown-menu li a {
+            padding: 0.6rem 1.5rem !important;
+            color: #2d211d !important;
+        }
+
+        .navbar .dropdown-menu li a:hover {
+            background: #9a735c !important;
+            color: white !important;
+        }
+    }
+
+    /* Overlay para móvil */
+    .mobile-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        z-index: 1400 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mobile-overlay.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Animación dropdown */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navbar .dropdown-menu.show {
+        animation: fadeInDown 0.3s ease !important;
+    }
+</style>

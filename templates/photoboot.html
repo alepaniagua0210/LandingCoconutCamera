@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+    
+{% block title %}Photo Booth - Plaza Natura{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/photobooth.css') }}">
+
+<!-- HERO SECTION -->
+<section class="pb-hero">
+    <div class="hero-content">
+        <span class="hero-badge">📍 Plaza Natura</span>
+        <h1 class="hero-title">Captura el Momento Perfecto</h1>
+        <p class="hero-text">
+            Vive la experiencia única. Nuestro Photo Booth crea recuerdos 
+            inseparables para siempre. ¡Resérvalo para tu evento!
+        </p>
+        <div class="hero-btns">
+            <a href="#paquetes" class="btn btn-primary btn-lg">Ver Paquetes</a>
+        </div>
+        
+    </div>
+    <div class="hero-visual">
+        <div class="booth-mockup">
+             <img src="{{ url_for('static', filename='imagenes/Photobooth.jpeg') }}" 
+                     alt="Photobooth" 
+                     class="booth-mockup">
+        </div>
+    </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="pb-how-it-works">
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-icon">1</div>
+            <h3>Escoge tu Fondo</h3>
+            <p>Selecciona entre nuestros fondos temáticos o personaliza el tuyo.</p>
+        </div>
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step">
+            <div class="step-icon">2</div>
+            <h3>Sonríe y Dispara</h3>
+            <p>Usa la pantalla táctil o pide ayuda a nuestro asistente.</p>
+        </div>
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step">
+            <div class="step-icon">3</div>
+            <h3>Imprime y Comparte</h3>
+            <p>Lleva tus copias físicas y recibe la galería digital al instante.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PAQUETES -->
+<section id="paquetes" class="pb-packages">
+    <h2 class="section-title">Paquetes de Alquiler</h2>
+    <p class="section-subtitle">Elige el plan perfecto para tu evento</p>
+    
+    <div class="packages-grid">
+        <!-- PAQUETE BÁSICO -->
+        <div class="package-card">
+            <div class="package-header">
+                <h3>Paquete Básico</h3>
+                <p class="price">2.5 hrs</p>
+            </div>
+            <div class="package-body">
+                <ul class="package-features">
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Tiempo de servicio</span>
+                            <span class="feature-desc">2 horas y media</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-camera"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Fotos</span>
+                            <span class="feature-desc">Ilimitadas durante el evento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-car"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Transporte</span>
+                            <span class="feature-desc">Incluido dentro de Managua</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mask"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Accesorios</span>
+                            <span class="feature-desc">Props divertidos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Marco</span>
+                            <span class="feature-desc">Editable y personalizable</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="package-footer">
+                <button class="btn-agregar-servicio" data-nombre="Photobooth Básico" data-precio="0">
+                    + Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- PAQUETE KEYCHAIN -->
+        <div class="package-card popular">
+            <span class="badge-popular">Más Popular</span>
+            <div class="package-header">
+                <h3>Paquete Keychain</h3>
+                <p class="price">2.5 hrs</p>
+            </div>
+            <div class="package-body">
+                <p class="package-includes">Lo mismo del Paquete Básico +:</p>
+                <ul class="package-features">
+                    <li class="highlight">
+                        <i class="fa-solid fa-key"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">¡Incluye Keychains!</span>
+                            <span class="feature-desc">Llaveros para las fotos</span>
+                        </div>
+                    </li>
+                    <li class="highlight">
+                        <i class="fa-solid fa-tags"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Correas para keychains</span>
+                            <span class="feature-desc">6 colores: rosa, lila, azul, verde, amarillo y negro</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Tiempo de servicio</span>
+                            <span class="feature-desc">2 horas y media</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-camera"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Fotos</span>
+                            <span class="feature-desc">Ilimitadas durante el evento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-car"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Transporte</span>
+                            <span class="feature-desc">Incluido dentro de Managua</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mask"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Accesorios</span>
+                            <span class="feature-desc">Props divertidos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <div class="feature-content">
+                            <span class="feature-title">Marco</span>
+                            <span class="feature-desc">Editable y personalizable</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="package-footer">
+                <button class="btn-agregar-servicio" data-nombre="Photobooth Keychain" data-precio="0">
+                    + Agregar al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- INFO DE RESERVA -->
+    <div class="reserve-info">
+        <h3><i class="fa-solid fa-calendar-check"></i> Información de Reserva</h3>
+        <div class="reserve-details">
+            <div class="reserve-item">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <div>
+                    <strong>Reserva con tiempo</strong>
+                    <p>Las fechas se reservan con anticipo</p>
+                </div>
+            </div>
+            <div class="reserve-item">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                    <strong>Forma de reserva</strong>
+                    <p>Reserva tu Photobooth con el <strong>30%</strong> y el restante puedes liquidarlo poco a poco hasta el día del evento.</p>
+                </div>
+            </div>
+        </div>
+        <p class="slogan">"Hacemos de tus momentos, recuerdos inolvidables ♡"</p>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="pb-testimonials">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Fue lo mejor de nuestra fiesta. Todos los invitados amaron el Photo Booth. ¡Las fotos quedaron únicas!"</p>
+            <div class="author">
+                <div class="avatar">MR</div>
+                <div class="info">
+                    <h4>María Rodríguez</h4>
+                    <span>XV Años</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Excelente servicio para nuestro evento corporativo. El equipo llegó puntual y el resultado fue impecable."</p>
+            <div class="author">
+                <div class="avatar">JC</div>
+                <div class="info">
+                    <h4>Juan Carlos</h4>
+                    <span>Gerente de Eventos</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Mi hija amó cada minuto. La calidad de impresión es increíble y el personal muy amable."</p>
+            <div class="author">
+                <div class="avatar">AL</div>
+                <div class="info">
+                    <h4>Ana López</h4>
+                    <span>Cumpleaños</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="pb-gallery">
+    <h2 class="section-title">Galería de Recuerdos</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/1.png') }}" alt="Prueba">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 124</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/2.png') }}" alt="Foto Booth">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 89</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/3.png') }}" alt="Foto Booth">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 201</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/4.png') }}" alt="Foto Booth">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 156</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/5.png') }}" alt="Foto Booth">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 67</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='photobooth/6.png') }}" alt="Foto Booth">
+            <div class="overlay"><i class="fa-solid fa-heart"></i> 98</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

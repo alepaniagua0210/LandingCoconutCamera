@@ -1,0 +1,83 @@
+{# Componente Footer #}
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Columna 1: Logo y descripción -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="footer-logo-title">Coconut</div>
+                    <div class="footer-logo-subtitle">camera</div>
+                </div>
+                <p class="footer-description">
+                    Tu tienda de confianza para capturar momentos inolvidables. 
+                    Ofrecemos las mejores cámaras y el mejor servicio de Photobooth del país.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/coconut_digicams_nicaragua/" 
+                       target="_blank" 
+                       class="social-link" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@coconutnicaragua?_r=1&_t=ZS-96LRuaP4bOy" 
+                       target="_blank" 
+                       class="social-link" 
+                       aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces rápidos -->
+            <div class="footer-col">
+                <h3 class="footer-title">Enlaces rápidos</h3>
+                <ul class="footer-links-list">
+                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                    <li><a href="{{ url_for('camara') }}">Cámaras</a></li>
+                    <li><a href="{{ url_for('photoboot') }}">Photobooth</a></li>
+                    <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="footer-col">
+                <h3 class="footer-title">Contacto</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Managua, Nicaragua</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+505 8922-1702</span>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- Columna 4: Ubicación Photobooth -->
+            <div class="footer-col">
+                <h3 class="footer-title">📍 Photobooth</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-pin"></i>
+                        <span>Plaza Natura</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun - Dom: 10am - 7pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Borde separador -->
+        <div class="footer-border"></div>
+
+        <!-- Fila inferior: copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Coconut - Tu tienda de fotografía y momentos inolvidables</p>
+        </div>
+    </div>
+</footer>

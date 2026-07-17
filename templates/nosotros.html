@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Nosotros - Coconut Camera{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nosotros.css') }}">
+
+
+<!-- Hero Section Nosotros -->
+<section class="hero-nosotros">
+    <div class="hero-container">
+        <h1>
+            Sobre Nosotros
+        </h1>
+        <p>
+            Conoce la historia, misión y pasión que nos impulsa a ofrecerte 
+            las mejores cámaras y momentos inolvidables.
+        </p>
+    </div>
+</section>
+
+<!-- Misión y Visión -->
+<section class="mission-vision">
+    <div class="mv-container">
+        <div class="mv-card">
+            <div class="mv-icon"></div>
+            <h2>Misión</h2>
+            <p>
+                Brindar experiencias únicas a través de la fotografía, ofreciendo cámaras digitales 
+                y servicios innovadores de PhotoBooth que permitan a las personas capturar recuerdos 
+                especiales de manera auténtica, creativa y accesible. 
+            </p>
+        </div>
+        <div class="mv-card">
+            <div class="mv-icon"></div>
+            <h2>Visión</h2>
+            <p>
+                Convertirnos en una marca reconocida en Nicaragua por innovar en el mundo de la fotografía
+                y el entretenimiento, expandiendo nuestros servicios y creando experiencias memorables que concecten 
+                con las nuevas generaciones. 
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Nuestra Historia -->
+<section class="history-section">
+    <div class="history-container">
+        <div class="history-text">
+            <h2>Nuestra Historia</h2>
+            <p>
+                Desde pequeña, la fotografía y las cámaras digitales han sido mi pasión. Lo que comenzó como un hobby se convirtió 
+                en un emprendimiento cuando, al buscar soluciones para una cámara dañada, descubrí la oportunidad de comprar y
+                restaurar cámaras digitales por lotes. Con esfuerzo, fe y mucha constancia, el proyecto comenzó a crecer, especialmente después de que un 
+                 video en TikTok se volviera viral y diera a conocer el negocio a muchas más personas.
+            </p>
+            <p>
+               Hoy, este emprendimiento se ha convertido en una marca en crecimiento que ofrece más de 300 modelos de cámaras digitales, un PhotoBooth en Plaza Natura y 
+               servicio de PhotoBooth para eventos y renta. Más que un negocio, es el resultado de una pasión convertida en propósito, con la misión de crear experiencias auténticas y 
+               memorables a través de la fotografía.
+            </p>
+        </div>
+        <div class="history-image">
+            <img src="{{ url_for('static', filename='imagenes/Logo2.png') }}" alt="Coconut Camera Store">
+        </div>
+    </div>
+</section>
+
+<!-- Nuestros Valores -->
+<section class="values-section">
+    <div class="section-title">
+        <h2>✨ Nuestros Valores</h2>
+        <p>Los principios que guían nuestro trabajo diario</p>
+    </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Creatividad</h3>
+            <p>Buscamos ofrecer experiencias originales y memorables en cada cámara, foto y servicio.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Responsabilidad</h3>
+            <p>Cuidamos cada detalle para brindar un servicio confiable y de calidad.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Innovación</h3>
+            <p>Apostamos por ideas nuevas que hagan la fotografía más divertida, accesible y actual.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Pasión</h3>
+            <p>Trabajamos con amor por capturar momentos especiales que duren para siempre. </p>
+        </div>
+         <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Atención al cliente</h3>
+            <p>Nos enfocamos en brindar una experiencia cercana, amable y personalizada.</p>
+        </div>
+           <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Perseverancía</h3>
+            <p>Creemos en seguir adelante con esfuerzo y constancia para hacer crecer cada proyecto.</p>
+        </div>
+           <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Autenticidad</h3>
+            <p>Valoramos lo real y lo espontáneo, porque cada recuerdo tiene su propio valor.</p>
+        </div>
+           <div class="value-card">
+            <div class="value-icon"></div>
+            <h3>Compromiso</h3>
+            <p>Nos dedicamos a ofrecer siempre lo mejor en cada servicio y producto.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Llamada a la acción -->
+<section class="contact-cta">
+    <div class="cta-container">
+        <h2>¿Listo para capturar momentos únicos?</h2>
+        <p>Contáctanos y descubre por qué Coconut Camera es tu mejor aliado en fotografía</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('coleccion') }}" class="btn-primary">Ver productos</a>
+            <a href="{{ url_for('contacto') }}" class="btn-outline">Contáctanos</a>
+        </div>
+    </div>
+</section>
+
+<script>src="{{ url_for('static', filename='js/nosotros.js') }}"</script>
+
+{% endblock %}

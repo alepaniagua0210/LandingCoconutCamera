@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto - Coconut{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css') }}">
+<!-- HERO -->
+
+<section class="contact-hero">
+
+    <h1>Hablemos 📸</h1>
+
+    <p>
+        Estamos listos para ayudarte a encontrar
+        la cámara perfecta para ti.
+    </p>
+
+</section>
+
+<!-- CONTACT INFO -->
+
+<section class="contact-info">
+
+    <div class="info-card">
+        <span>📍</span>
+        <h3>Ubicación</h3>
+        <p>Managua, Nicaragua</p>
+    </div>
+
+    <div class="info-card">
+        <span>📞</span>
+        <h3>Teléfono</h3>
+        <p>+505 8922-1702</p>
+    </div>
+
+</section>
+<!-- REDES SOCIALES -->
+
+<section class="social-section">
+
+    <div class="social-container">
+        <h2>
+            Síguenos en redes sociales
+        </h2>
+
+        <p>
+            Descubre contenido creativo, fotografías,
+            detrás de cámaras y momentos inolvidables
+            junto a nuestra comunidad.
+        </p>
+
+        <div class="social-links">
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/coconut_digicams_nicaragua/" 
+            target="_blank"
+            class="social-card instagram">
+
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="social-info">
+                    <h3>Instagram</h3>
+                    <span>@coconut_digicams_nicaragua</span>
+                </div>
+
+            </a>
+
+            <!-- TIKTOK -->
+
+            <a href="https://www.tiktok.com/@coconutnicaragua?_r=1&_t=ZS-96LRuaP4bOy" 
+            target="_blank"
+            class="social-card tiktok">
+
+                <div class="social-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+
+                <div class="social-info">
+                    <h3>TikTok</h3>
+                    <span>@coconut.nicaragua</span>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MAPA -->
+<div class="map-header">
+
+    <h2>
+        Encuentra nuestro Photo Booth aquí
+    </h2>
+
+    <p>
+        Visítanos y vive la experiencia Coconut.
+        Nuestro espacio está diseñado para crear
+        recuerdos únicos y fotografías inolvidables.
+    </p>
+
+</div>
+<section class="map-section">
+
+    <div class="map-container">
+
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.8117311445881!2d-86.27580060991792!3d12.11299405245062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f71559502c30bef%3A0x92255743424c2d10!2sPlaza%20Natura!5e0!3m2!1ses-419!2sni!4v1778730101383!5m2!1ses-419!2sni" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+
+{% endblock %}

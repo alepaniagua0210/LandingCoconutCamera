@@ -1,0 +1,277 @@
+.filter-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#f2eee8;
+    transition:.3s;
+}
+
+.filter-btn:hover{
+    background:#111;
+    color:white;
+}
+/* ===== PRODUCTOS SECTION CON FONDO PAMPAS ===== */
+.productos-section {
+    min-height: 100vh;
+    padding: 120px 60px 60px;
+    background: #f8f6f4 !important;  /* pampas-50 */
+    position: relative;
+}
+
+/* ===== TITULO CON PALETA PAMPAS ===== */
+.titulo {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #2d211d;  /* pampas-950 */
+    font-family: 'Playfair Display', Georgia, serif;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #9a735c, #694e43);
+    padding: 0.8rem 2.5rem;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(154,115,92,0.2);
+    letter-spacing: 2px;
+    white-space: nowrap;
+    z-index: 2;
+    color: white !important;
+}
+
+
+/* ===== CONTENEDOR DE TARJETAS ===== */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== CARD CON PALETA PAMPAS ===== */
+.product-card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 35px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .35s ease, box-shadow .35s ease;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+/* EFECTO HOVER */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* IMAGEN */
+.card-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+/* IMAGEN INICIAL */
+.card-image img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,.85)) drop-shadow(0 0 22px rgba(255,255,255,.30));
+    transition: transform .35s ease, filter .35s ease;
+    backface-visibility: hidden;
+}
+
+/* AL ABRIR CARD */
+.product-card.active img {
+    filter: none;
+    transform: scale(.92);
+}
+
+/* NOMBRE */
+.card-preview {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+.card-preview h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+/* INFO */
+.card-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.72);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: .4s;
+}
+
+.card-info p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.price {
+    margin-top: 25px;
+    color: #f2eee8;  /* pampas-100 */
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* CARD ACTIVA */
+.product-card.active {
+    transform: scale(1.06);
+    z-index: 10;
+}
+
+.product-card.active .card-info {
+    opacity: 1;
+}
+
+.product-card.active img {
+    transform: scale(.82);
+}
+
+/* ===== COLORES POR MARCA ===== */
+
+.sony{
+    background: #9a735c;
+}
+
+.canon{
+    background: #805e4e;
+}
+
+.samsung{
+    background: #b69a81;
+}
+
+.nikon{
+    background: #694e43;
+}
+
+.kodak{
+    background: #ccbaa5;
+}
+
+.casio{
+    background: #564038;
+}
+
+.olympus{
+    background: #a78468;
+}
+
+.panasonic{
+    background: #e0d6c8;
+}
+
+.pixpro{
+    background: #2d211d;
+}
+
+/* ===== DECORACIONES DE FONDO ===== */
+.productos-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(154,115,92,0.08) 0%, rgba(154,115,92,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.productos-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(128,94,78,0.06) 0%, rgba(128,94,78,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .productos-section {
+        padding: 100px 20px 40px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+        white-space: normal;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .titulo::before {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+
+    .cards-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product-card,
+    .product-card.active {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .productos-section::before,
+    .productos-section::after {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-container {
+        gap: 25px;
+    }
+    
+    .product-card {
+        width: 280px;
+        height: 400px;
+    }
+}

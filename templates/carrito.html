@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Carrito | Coconut Camera{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/carrito.css') }}">
+
+<section class="carrito-page">
+
+    <h1 class="carrito-page-title">🛒 Tu Carrito</h1>
+    <p class="carrito-page-subtitle">Revisa tu selección y envíanos tu consulta por WhatsApp</p>
+
+    <div class="carrito-layout">
+
+        <!-- LISTA DE ITEMS -->
+        <div id="carrito-container">
+            <!-- Se renderiza con JS -->
+        </div>
+
+        <!-- PANEL RESUMEN -->
+        <div id="carrito-total-section" style="display:none;">
+            <div class="carrito-resumen">
+                <h3>Resumen</h3>
+
+                <div class="resumen-total">
+                    <span>Total estimado</span>
+                    <span id="carrito-total">$0.00</span>
+                </div>
+
+                <button class="btn-whatsapp" onclick="finalizarPorWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Solicitar por WhatsApp
+                </button>
+
+                <button class="btn-vaciar" onclick="vaciarCarrito()">
+                    Vaciar carrito
+                </button>
+
+                <a href="/camara" class="btn-seguir">← Seguir explorando</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+{% endblock %}
