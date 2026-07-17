@@ -4,7 +4,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 
 
 <!-- Hero Section con fondo degradado -->
@@ -38,109 +38,18 @@
                     <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/SonyRX100.png') }}" alt="Sony RX100">
                 </div>
                 <div class="carousel-item-diagonal" data-position="1">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/samsungmv900f.png') }}"
+                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/SamsungMV900F.png') }}"
                         alt="Samsung MV900F">
                 </div>
                 <div class="carousel-item-diagonal" data-position="2">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/canonelph300hs.png') }}"
+                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/CanonELPH300HS.png') }}"
                         alt="Canon ELPH 300HS">
                 </div>
                 <div class="carousel-item-diagonal" data-position="3">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/nikonp80.png') }}" alt="Nikon P80">
+                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/NikonP80.png') }}" alt="Nikon P80">
                 </div>
                 <div class="carousel-item-diagonal" data-position="4">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/pixprofz55.png') }}"
+                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/PixProFZ55.png') }}"
                         alt="PixPro FZ55">
                 </div>
                 <div class="carousel-item-diagonal" data-position="5">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/olympusfe4020.png') }}"
-                        alt="Olympus FE4020">
-                </div>
-                <div class="carousel-item-diagonal" data-position="6">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/kodakm380.png') }}" alt="Kodak M380">
-                </div>
-                <div class="carousel-item-diagonal" data-position="7">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/casioexilimEXZS5.png') }}"
-                        alt="Casio Exilim">
-                </div>
-                <div class="carousel-item-diagonal" data-position="8">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/samsungpl50.png') }}"
-                        alt="Samsung PL50">
-                </div>
-                <div class="carousel-item-diagonal" data-position="9">
-                    <img src="{{ url_for('static', filename='CamarasPNG/CamarasPNG/canonelph135.png') }}"
-                        alt="Canon ELPH 135">
-                </div>
-            </div>
-            <div class="carousel-nav">
-                <button class="carousel-nav-btn" id="prevBtn">◀</button>
-                <button class="carousel-nav-btn" id="nextBtn">▶</button>
-            </div>
-        </div>
-
-    </div>
-    
-</section>
-
-<!-- ===== BOTÓN DESPLEGABLE LATERAL - CÁMARAS RECOMENDADAS ===== -->
-    <!-- Botón flotante en el borde izquierdo -->
-    <button class="btn-recomendadas" id="btnRecomendadas">
-        <span class="btn-text">Cámaras recomendadas</span>
-    </button>
-
-    <!-- Panel lateral deslizante -->
-    <div class="panel-overlay" id="panelOverlay"></div>
-    <div class="panel-lateral" id="panelLateral">
-        <div class="panel-header">
-            <h3>Cámaras recomendadas</h3>
-            <button class="panel-close" id="panelClose">✕</button>
-        </div>
-
-        <div class="panel-body">
-            <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
-            <div class="panel-cards" id="panelCards">
-            </div>
-
-            <div class="panel-footer">
-                <a href="{{ url_for('camara') }}" class="panel-btn-ver-todas">
-                    Ver todas las cámaras →
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== DATOS PARA EL PANEL (con url_for) ===== -->
-<script>
-    // Variables globales para el panel
-    window.camaraUrl = "{{ url_for('camara') }}";
-    
-    window.camarasRecomendadas = [
-        {
-            nombre: 'Sony RX100',
-            imagen: "{{ url_for('static', filename='CamarasPNG/CamarasPNG/SonyRX100.png') }}",
-            precio: '$280',
-            descripcion: 'Compacta profesional'
-        },
-        {
-            nombre: 'Canon ELPH 300HS',
-            imagen: "{{ url_for('static', filename='CamarasPNG/CamarasPNG/canonelph300hs.png') }}",
-            precio: '$250',
-            descripcion: 'Ultracompacta'
-        },
-        {
-            nombre: 'Nikon P80',
-            imagen: "{{ url_for('static', filename='CamarasPNG/CamarasPNG/nikonp80.png') }}",
-            precio: '$190',
-            descripcion: 'Zoom potente'
-        }
-    ];
-    
-    console.log('✅ Datos cargados:', window.camarasRecomendadas);
-</script>
-
-<!-- Luego cargas el index.js -->
-<script src="{{ url_for('static', filename='js/index.js') }}"></script>
-
-
-
-{% endblock %}

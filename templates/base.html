@@ -6,7 +6,6 @@
     <title>{% block title %}Coconut{% endblock %}</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/carrito.css') }}">
     <!-- ICONOS -->
     <link rel="stylesheet"
@@ -28,7 +27,6 @@
     <!-- Scripts externos -->
     <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
     <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     
     <!-- Bloque para scripts adicionales por página -->
     {% block scripts %}{% endblock %}
